@@ -22,14 +22,6 @@ function InterviewComplete() {
           <br />
           Your responses have been recorded successfully, and feedback will be shared with the recruiter shortly.
         </p>
-
-        {/* CTA Button */}
-        <Button
-          className="mt-8 px-6 py-3 rounded-full text-lg font-semibold shadow-md bg-blue-600 hover:bg-blue-700 text-white"
-          onClick={() => router.replace("/dashboard")}
-        >
-          Go to Dashboard
-        </Button>
       </div>
     </div>
   );
