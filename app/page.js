@@ -23,14 +23,14 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    if (loading) return; // still checking session
+  if (loading) return; // wait until session check is done
 
-    if (user) {
-      router.replace("/dashboard");
-    } else {
-      router.replace("/auth");
-    }
-  }, [user, loading, router]);
+  if (user) {
+    router.replace("/dashboard");
+  }
+  // ❌ don’t auto-send to /auth here
+  // let users go to /auth manually if they’re not logged in
+}, [user, loading, router]);
 
   return (
     <div className="flex items-center justify-center h-screen">
